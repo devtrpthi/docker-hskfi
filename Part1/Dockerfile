@@ -1,11 +1,15 @@
-FROM alpine:3.13
+FROM ubuntu:20.04
 
 WORKDIR /usr/src/app
 
-COPY hello.sh .
+RUN \
+  apt-get update && \
+  apt-get -y install curl
 
-RUN chmod +x hello.sh
+COPY search.sh .
 
-CMD  ./hello.sh 
+RUN chmod +x search.sh
+
+CMD  ./search.sh 
 
 
