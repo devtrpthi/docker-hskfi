@@ -11,5 +11,5 @@ RUN chmod a+x /usr/local/bin/youtube-dl
 
 ENV LC_ALL=C.UTF-8
 
-CMD [ "/usr/local/bin/youtube-dl" ]
+ENTRYPOINT [ "/usr/local/bin/youtube-dl" ]
 
