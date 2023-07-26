@@ -1,15 +1,5 @@
-FROM ubuntu:20.04
+FROM devopsdockeruh/simple-web-service:alpine 
 
-WORKDIR /usr/src/app
-
-RUN \
-  apt-get update && \
-  apt-get -y install curl
-
-COPY search.sh .
-
-RUN chmod +x search.sh
-
-CMD  ./search.sh 
+CMD server
 
 
